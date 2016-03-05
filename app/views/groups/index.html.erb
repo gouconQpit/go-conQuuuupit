@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>グループリスト</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>地域</th>
+      <th>平均年齢</th>
+      <th>グループPR</th>
+      <th>マッチングID</th>
+      <th>時間</th>
+      <th>評価</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= group.name %></td>
+        <td><%= group.area_id %></td>
+        <td><%= group.average_age %></td>
+        <td><%= group.pr_text %></td>
+        <td><%= group.match_log_id %></td>
+        <td><%= group.time_id %></td>
+        <td><%= group.rate %></td>
+        <td><%= link_to '詳細', group %></td>
+        <td><%= link_to '編集', edit_group_path(group) %></td>
+        <td><%= link_to '削除', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規グループ作成', new_group_path %>
