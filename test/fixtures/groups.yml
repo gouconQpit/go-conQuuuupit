@@ -7,3 +7,20 @@ one:
 two:
   name: MyString
   description: MyText
+
+  area_id: 1
+  average_age: 1
+  pr_text: MyString
+  match_log_id: 1
+  time_id: 1
+  rate: 1
+
+two:
+  name: MyString
+  area_id: 1
+  average_age: 1
+  pr_text: MyString
+  match_log_id: 1
+  time_id: 1
+  rate: 1
+

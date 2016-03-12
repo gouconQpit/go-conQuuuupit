@@ -1,14 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+
   <strong>Name:</strong>
+
+  <strong>グループ名前</strong>
   <%= @group.name %>
 </p>
 
 <p>
+
   <strong>Description:</strong>
   <%= @group.description %>
 </p>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
+  <strong>地域</strong>
+  <%= @group.area_id %>
+</p>
+
+<p>
+  <strong>平均年齢</strong>
+  <%= @group.average_age %>
+</p>
+
+<p>
+  <strong>自己PR</strong>
+  <%= @group.pr_text %>
+</p>
+
+<p>
+  <strong>マッチングID</strong>
+  <%= @group.match_log_id %>
+</p>
+
+<p>
+  <strong>希望時間帯</strong>
+  <%= @group.time_id %>
+</p>
+
+<p>
+  <strong>評価</strong>
+  <%= @group.rate %>
+</p>
+
+<%= link_to '編集', edit_group_path(@group) %> |
+<%= link_to '戻る', groups_path %>
