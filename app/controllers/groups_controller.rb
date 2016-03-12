@@ -59,6 +59,10 @@ class GroupsController < ApplicationController
       format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
+    def login
+    end
+    
   end
 
   private
