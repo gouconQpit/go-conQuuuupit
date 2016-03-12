@@ -11,14 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
- 
-ActiveRecord::Schema.define(version: 20160227074932) do
+ActiveRecord::Schema.define(version: 20160305055825) do
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "area_id"
+    t.integer  "average_age"
+    t.string   "pr_text"
+    t.integer  "match_log_id"
+    t.integer  "time_id"
+    t.integer  "rate"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,20 +52,4 @@ ActiveRecord::Schema.define(version: 20160227074932) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-
-ActiveRecord::Schema.define(version: 20160305055825) do
-
-  create_table "groups", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "area_id"
-    t.integer  "average_age"
-    t.string   "pr_text"
-    t.integer  "match_log_id"
-    t.integer  "time_id"
-    t.integer  "rate"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
- 
 end
