@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 #  root to: "groups#index"
   get'/login' => 'groups#login'
 
+  root to: "groups#index"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

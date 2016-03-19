@@ -13,45 +13,25 @@
 
  
   <div class="field">
-    <%= f.label :name %><br>
+  　 <%= f.label "グループ名" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    
-    
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-
-
-
-  <div class="field">
-  　    <%= f.label "グループ名" %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label "地域" %><br>
-    <%= f.number_field :area_id %>
-  </div>
-  <div class="field">
-    <%= f.label "平均年齢" %><br>
-    <%= f.number_field :average_age %>
+    <%= f.label :area_id, '地域' %><br />
+    <%= f.select :area_id, ['北海道','青森','岩手','秋田','宮城','山形','宮城','福島','新潟','栃木','茨城','群馬','千葉','東京','埼玉','神奈川','長野','富山','石川','岐阜','福井','山梨','静岡','愛知','滋賀','三重','京都','奈良','大阪','和歌山','兵庫','鳥取','岡山','広島','島根','山口','香川','徳島','高知','愛媛','大分','福岡','佐賀','長崎','熊本','宮崎','鹿児島','沖縄'
+      ] %>
   </div>
   <div class="field">
     <%= f.label "グループPR" %><br>
     <%= f.text_field :pr_text %>
   </div>
   <div class="field">
-    <%= f.label "マーチングID" %><br>
+    <%= f.label "マッチングID" %><br>
     <%= f.number_field :match_log_id %>
   </div>
   <div class="field">
     <%= f.label "希望時間" %><br>
-    <%= f.number_field :time_id %>
-  </div>
-  <div class="field">
-    <%= f.label "評価" %><br>
-    <%= f.number_field :rate %>
+    <%= f.select :time_id, ['17:00~', '18:00~', '19:00~', '20:00~'] %>
   </div>
   <div class="actions">
     <%= f.submit "グループ作成" %>
